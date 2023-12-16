@@ -38,13 +38,13 @@
 
 
  const cards = document.getElementById("cards")
- for (let i = 0; i < arr.length ;i++){
+ arr.forEach((product,index)=>{
 
   const {id:card_id,
     title:card_title,
     price:card_price,
     description:card_description,
-    image_url:card_img_url} = arr[i]
+    image_url:card_img_url} = arr[index]
 
   cards.innerHTML += `<div class="card" style="width: 18rem;">
   <img src="${card_img_url}" class="card-img-top" alt="...">
@@ -55,5 +55,5 @@
     <a href="#" class="btn btn-primary">Order Now</a>
   </div>
 </div>`
- }
+ })
 
